@@ -1,9 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
+
+const GlobalStyle = createGlobalStyle`
+  ${reset}
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+`;
 
 ReactDOM.render(
-  <React.StrictMode>
+  <>
+    <GlobalStyle />
     <div>Hello World</div>
-  </React.StrictMode>,
+  </>,
   document.getElementById('root'),
 );
