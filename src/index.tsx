@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import reset from 'styled-reset';
+import theme from './styled/theme';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -11,9 +12,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 ReactDOM.render(
-  <>
+  <ThemeProvider theme={theme}>
     <GlobalStyle />
     <div>Hello World</div>
-  </>,
+  </ThemeProvider>,
   document.getElementById('root'),
 );
