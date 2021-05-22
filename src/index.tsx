@@ -1,20 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import reset from 'styled-reset';
+import { ThemeProvider } from 'styled-components';
 import theme from './styled/theme';
-
-const GlobalStyle = createGlobalStyle`
-  ${reset}
-  body {
-    font-family: "Montserrat", sans-serif;
-  }
-`;
+import { GlobalStyle } from './styled/GlobalStyle';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <div>Hello World</div>
-  </ThemeProvider>,
+  <BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Switch>
+        <Route path="/myhighlights">
+          <div>myhighlights</div>
+        </Route>
+        <Route path="/home">
+          <div>HOME</div>
+        </Route>
+        <Route path="/">
+          <div>asdfadsf</div>
+        </Route>
+      </Switch>
+    </ThemeProvider>
+  </BrowserRouter>,
   document.getElementById('root'),
 );
