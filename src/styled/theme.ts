@@ -19,8 +19,15 @@ type Color =
   | 'modalTitle'
   | 'blue'
   | 'darkGray'
-  | 'gray';
-type BackgroundColor = 'gray' | 'hoverGray' | 'white' | 'hoverWhite';
+  | 'gray'
+  | 'trendingTitle'
+  | 'trendingKeyword';
+type BackgroundColor =
+  | 'gray'
+  | 'hoverGray'
+  | 'white'
+  | 'hoverWhite'
+  | 'hoverLightGray';
 
 const theme: Theme = {
   fontSize: {
@@ -40,10 +47,13 @@ const theme: Theme = {
     normalGray: '#787d86',
     gray: '#777',
     blue: '#00bdb8',
+    trendingTitle: '#969aa2',
+    trendingKeyword: '#555',
   },
   background: {
     gray: '#bcbec0',
     hoverGray: '#f6f8fa',
+    hoverLightGray: '#eef1f4',
     hoverWhite: '#e5f8f7',
     white: '#fff',
   },

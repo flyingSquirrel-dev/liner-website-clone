@@ -10,7 +10,6 @@ const SearchForm = styled.form`
 
 const SearchInput = styled.input`
   width: 100%;
-  max-width: 500px;
   padding: 10px 54px 11px 16px;
   border-radius: 8px;
   background-color: #eef1f4;
