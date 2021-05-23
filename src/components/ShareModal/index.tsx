@@ -60,7 +60,7 @@ const Icon = styled.a<{ iconName: string }>`
   background-image: url(${({ iconName }) =>
     require(`../../images/${iconName}.svg`).default});
   background-repeat: no-repeat;
-  background-size: 36px;
+  background-size: 35px;
 `;
 
 const CopyURLWrapper = styled.div`
@@ -91,11 +91,12 @@ const CloseIcon = styled.button`
 export const ShareModal = ({ modalHandler }: Props) => {
   return (
     <Portal>
-      <Background onClick={modalHandler}>
+      <>
+        <Background onClick={modalHandler} />
         <ModalWrapper>
           <TitleWrapper>
             <Title>{SHARE_ORIGINAL_PAGE}</Title>
-            <CloseIcon />
+            <CloseIcon onClick={modalHandler} />
           </TitleWrapper>
           <IconWrapper>
             {[
@@ -114,7 +115,7 @@ export const ShareModal = ({ modalHandler }: Props) => {
             <CopyButton />
           </CopyURLWrapper>
         </ModalWrapper>
-      </Background>
+      </>
     </Portal>
   );
 };
