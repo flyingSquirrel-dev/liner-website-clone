@@ -1,5 +1,8 @@
-export const article1 = {
+import { ArticleProps } from '../../@types/article';
+
+export const article1: ArticleProps = {
   title: 'What Is a Pandemic? - WebMD',
+  id: 1,
   host: 'www.webmd.com',
   url: 'https://www.webmd.com/cold-and-flu/features/what-is-pandemic',
   highlight:

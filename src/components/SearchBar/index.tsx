@@ -1,4 +1,4 @@
-import { INPUT_MIN_WIDTH, SEARCHBAR_PLACE_HOLDER } from '../../constants';
+import { SEARCHBAR_PLACE_HOLDER } from '../../constants';
 import styled from 'styled-components';
 
 import searchIcon from '../../images/search.svg';
@@ -9,9 +9,11 @@ const SearchForm = styled.form`
 `;
 
 const SearchInput = styled.input`
-  min-width: ${INPUT_MIN_WIDTH}px;
+  width: 100%;
+  max-width: 500px;
   padding: 10px 54px 11px 16px;
   border-radius: 8px;
+  box-sizing: border-box;
   background-color: #eef1f4;
   line-height: 1.2;
   font-size: ${({ theme }) => theme.fontSize.normal};

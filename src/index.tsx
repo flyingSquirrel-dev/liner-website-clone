@@ -10,6 +10,7 @@ import { MyHighlights } from './pages/myhighlights';
 import { Header } from './containers/Header';
 import { LeftMenu } from './containers/LeftMenu';
 import { More } from './pages/more';
+import { Detail } from './pages/detail';
 
 const RootContainer = styled.div`
   display: flex;
@@ -19,6 +20,7 @@ const RootContainer = styled.div`
 `;
 
 const ContentWrapper = styled.div`
+  display: flex;
   margin-top: 50px;
 `;
 
@@ -31,6 +33,7 @@ ReactDOM.render(
         <ContentWrapper>
           <LeftMenu />
           <Switch>
+            <Route path="/detail/:articleID" render={Detail} />
             <Route path="/myhighlights" render={MyHighlights} />
             <Route path="/home" render={Home} />
             <Route path="/more" render={More} />
