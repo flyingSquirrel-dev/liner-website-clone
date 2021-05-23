@@ -9,6 +9,7 @@ import { NotFoundPage } from './pages/notfound';
 import { MyHighlights } from './pages/myhighlights';
 import { Header } from './containers/Header';
 import { LeftMenu } from './containers/LeftMenu';
+import { More } from './pages/more';
 
 const RootContainer = styled.div`
   display: flex;
@@ -18,7 +19,7 @@ const RootContainer = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  display: flex;
+  margin-top: 50px;
 `;
 
 ReactDOM.render(
@@ -32,6 +33,7 @@ ReactDOM.render(
           <Switch>
             <Route path="/myhighlights" render={MyHighlights} />
             <Route path="/home" render={Home} />
+            <Route path="/more" render={More} />
             <Route path="/" exact={true}>
               <Redirect to="/home" />
             </Route>

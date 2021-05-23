@@ -4,12 +4,13 @@ export interface Theme {
   background: Record<BackgroundColor, string>;
 }
 
-type FontSize = 'normal' | 'regular' | 'small';
+type FontSize = 'normal' | 'regular' | 'small' | 'large';
 type Color = 'deepGray' | 'lightGray' | 'normalGray' | 'blue';
 type BackgroundColor = 'gray' | 'hoverGray';
 
 const theme: Theme = {
   fontSize: {
+    large: '32px',
     normal: '16px',
     regular: '14px',
     small: '12px',

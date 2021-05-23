@@ -1,3 +1,10 @@
+import { PageTitle } from '../../components/PageTitle';
+import { MY_HIGHLIGHTS } from '../../constants';
+
 export const MyHighlights = () => {
-  return <div>My HighLights</div>;
+  return (
+    <>
+      <PageTitle title={MY_HIGHLIGHTS} />
+    </>
+  );
 };
