@@ -6,7 +6,7 @@ interface Props {
 
 const Description = styled.div`
   padding-top: 16px;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
