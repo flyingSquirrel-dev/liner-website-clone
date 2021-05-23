@@ -5,6 +5,7 @@ interface Props {
 }
 
 const Subtitle = styled.h3`
+  margin-bottom: 24px;
   font-size: ${({ theme }) => theme.fontSize.regular};
   color: ${({ theme }) => theme.color.normalGray};
 `;

@@ -32,6 +32,7 @@ export const Home = () => {
             host={article.host}
             description={article.description}
             articleID={article.id}
+            thumbnailURL={article.thumbnailURL}
           />
         ))}
       </ArticleWrapper>

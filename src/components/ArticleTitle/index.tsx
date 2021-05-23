@@ -10,6 +10,10 @@ const Container = styled.h2`
   font-weight: 700;
   line-height: 1.33;
   color: ${({ theme }) => theme.color.darkGray};
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 const Title = styled.div``;

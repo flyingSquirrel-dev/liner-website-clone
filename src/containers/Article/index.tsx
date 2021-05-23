@@ -12,10 +12,15 @@ interface Props {
   host: string;
   description: string;
   articleID: number;
+  thumbnailURL?: string;
 }
 
 const Container = styled.div`
-  padding: 24px 16px 0;
+  padding-top: 24px;
+`;
+
+const TextAndThumbnailWrapper = styled.div`
+  display: flex;
 `;
 
 const TextWrapper = styled(Link)`
@@ -44,9 +49,11 @@ const ReferenceIcon = styled.span`
 `;
 
 const ReferenceText = styled.a`
+  margin-left: 14px;
   font-size: ${({ theme }) => theme.fontSize.tiny};
   font-weight: 400;
   color: ${({ theme }) => theme.color.gray};
+  text-decoration: underline;
 `;
 
 const IconWrapper = styled.div`
@@ -54,13 +61,34 @@ const IconWrapper = styled.div`
   align-items: center;
 `;
 
-export const Article = ({ title, host, description, articleID }: Props) => {
+const Thumbnail = styled.img`
+  width: 96px;
+  height: 96px;
+  margin-left: 24px;
+  border-radius: 4px;
+  object-fit: cover;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
+export const Article = ({
+  title,
+  host,
+  description,
+  articleID,
+  thumbnailURL,
+}: Props) => {
   return (
     <Container>
-      <TextWrapper to={`/detail/${articleID}`}>
-        <ArticleTitle title={title} />
-        <ArticleDescription description={description} />
-      </TextWrapper>
+      <TextAndThumbnailWrapper>
+        <TextWrapper to={`/detail/${articleID}`}>
+          <ArticleTitle title={title} />
+          <ArticleDescription description={description} />
+        </TextWrapper>
+        {thumbnailURL && <Thumbnail src={thumbnailURL} alt={title} />}
+      </TextAndThumbnailWrapper>
       <BottomWrapper>
         <Reference>
           <ReferenceIcon />
