@@ -10,7 +10,6 @@ const NotificationIconButton = styled.button`
   background-repeat: no-repeat;
   background-position: 50%;
   border-radius: 50%;
-  cursor: pointer;
 `;
 
 export const NotificationIcon = () => {

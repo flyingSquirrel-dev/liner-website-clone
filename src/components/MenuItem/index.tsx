@@ -20,7 +20,6 @@ const Container = styled(NavLink)`
   border-radius: 8px;
   color: ${({ theme }) => theme.color.normalGray};
   cursor: pointer;
-  box-sizing: border-box;
 
   &:hover {
     background: ${({ theme }) => theme.background.hoverGray};

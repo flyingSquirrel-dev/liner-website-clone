@@ -4,26 +4,37 @@ export interface Theme {
   background: Record<BackgroundColor, string>;
 }
 
-type FontSize = 'normal' | 'regular' | 'small' | 'large' | 'articleTitle';
+type FontSize =
+  | 'normal'
+  | 'regular'
+  | 'tiny'
+  | 'large'
+  | 'articleTitle'
+  | 'modalTitle'
+  | 'small';
 type Color =
   | 'deepGray'
   | 'lightGray'
   | 'normalGray'
+  | 'modalTitle'
   | 'blue'
   | 'darkGray'
   | 'gray';
-type BackgroundColor = 'gray' | 'hoverGray';
+type BackgroundColor = 'gray' | 'hoverGray' | 'white' | 'hoverWhite';
 
 const theme: Theme = {
   fontSize: {
     large: '32px',
+    modalTitle: '24px',
     articleTitle: '20px',
     normal: '16px',
     regular: '14px',
-    small: '11px',
+    small: '12px',
+    tiny: '11px',
   },
   color: {
     darkGray: '#222',
+    modalTitle: '#272b31',
     deepGray: '#333',
     lightGray: '#b6b8ba',
     normalGray: '#787d86',
@@ -33,6 +44,8 @@ const theme: Theme = {
   background: {
     gray: '#bcbec0',
     hoverGray: '#f6f8fa',
+    hoverWhite: '#e5f8f7',
+    white: '#fff',
   },
 };
 

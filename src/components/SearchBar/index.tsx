@@ -13,7 +13,6 @@ const SearchInput = styled.input`
   max-width: 500px;
   padding: 10px 54px 11px 16px;
   border-radius: 8px;
-  box-sizing: border-box;
   background-color: #eef1f4;
   line-height: 1.2;
   font-size: ${({ theme }) => theme.fontSize.normal};

@@ -3,6 +3,8 @@ import { ArticleDescription } from '../../components/ArticleDescription';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import icon from '../../images/favicon.svg';
+import { SaveIcon } from '../../components/SaveIcon';
+import { ShareIcon } from '../../components/ShareIcon';
 
 interface Props {
   title: string;
@@ -12,11 +14,11 @@ interface Props {
   articleID: number;
 }
 
-const Container = styled(Link)`
+const Container = styled.div`
   padding: 24px 16px 0;
 `;
 
-const TextWrapper = styled.div`
+const TextWrapper = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -42,7 +44,7 @@ const ReferenceIcon = styled.span`
 `;
 
 const ReferenceText = styled.a`
-  font-size: ${({ theme }) => theme.fontSize.small};
+  font-size: ${({ theme }) => theme.fontSize.tiny};
   font-weight: 400;
   color: ${({ theme }) => theme.color.gray};
 `;
@@ -52,22 +54,10 @@ const IconWrapper = styled.div`
   align-items: center;
 `;
 
-const BottomIcon = styled.button<{ url: string }>`
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  background-image: url(${({ url }) =>
-    require(`../../images/${url}.svg`).default});
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: 50%;
-  box-sizing: border-box;
-`;
-
 export const Article = ({ title, host, description, articleID }: Props) => {
   return (
-    <Container to={`/detail/${articleID}`}>
-      <TextWrapper>
+    <Container>
+      <TextWrapper to={`/detail/${articleID}`}>
         <ArticleTitle title={title} />
         <ArticleDescription description={description} />
       </TextWrapper>
@@ -79,9 +69,8 @@ export const Article = ({ title, host, description, articleID }: Props) => {
           </ReferenceText>
         </Reference>
         <IconWrapper>
-          {['save', 'share-header', 'more-light'].map((iconName) => (
-            <BottomIcon url={iconName} />
-          ))}
+          <SaveIcon />
+          <ShareIcon />
         </IconWrapper>
       </BottomWrapper>
     </Container>

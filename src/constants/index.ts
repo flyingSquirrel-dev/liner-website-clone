@@ -18,3 +18,9 @@ export const FOR_YOU_TITLE_DROPBOX = {
   description: 'Select for feed',
   options: ['English', '한국어', '简体字', '繁體字', '日本語', 'Others'],
 };
+
+export const ADD_TAGS = '+ Add Tags' as const;
+export const SHARE_ORIGINAL_PAGE = 'Share Original Page' as const;
+export const DUMMY_COPY_URL =
+  'https://www.webmd.com/cold-and-flu/features/what-is-pandemic' as const;
+export const COPY = 'COPY' as const;

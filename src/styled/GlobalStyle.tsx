@@ -19,8 +19,10 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
     box-sizing: content-box;
     background-color: unset;
+    cursor: pointer;
   }
   a {
     text-decoration: none;
+    cursor: pointer;
   }
 `;

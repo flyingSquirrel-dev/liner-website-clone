@@ -30,7 +30,6 @@ const InfoButton = styled.button`
   background-image: url(${infoIcon});
   background-repeat: no-repeat;
   background-position: 50%;
-  cursor: pointer;
 `;
 
 export const PageTitle = ({ title }: Props) => {
