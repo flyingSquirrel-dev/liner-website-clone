@@ -7,7 +7,7 @@ import { LEFT_MENU_WIDTH } from '../../constants';
 const HeaderContainer = styled.header`
   position: fixed;
   display: grid;
-  width: inherit;
+  width: 80%;
   top: 0;
   height: 64px;
   grid-template-columns: ${LEFT_MENU_WIDTH}px auto 344px;

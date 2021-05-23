@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import icon from '../../images/favicon.svg';
 import { SaveIcon } from '../../components/SaveIcon';
 import { ShareIcon } from '../../components/ShareIcon';
+import { MoreIcon } from '../../components/MoreIcon';
 
 interface Props {
   title: string;
@@ -104,6 +105,7 @@ export const Article = ({
         <IconWrapper>
           <SaveIcon />
           <ShareIcon />
+          <MoreIcon />
         </IconWrapper>
       </BottomWrapper>
     </Container>
