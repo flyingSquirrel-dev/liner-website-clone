@@ -5,7 +5,7 @@ import { NotificationIcon } from '../../components/NotificationIcon';
 
 const HeaderContainer = styled.header`
   display: flex;
-  max-width: 800px;
+  max-width: 80%;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;

@@ -1,10 +1,12 @@
 export interface Theme {
   fontSize: Record<FontSize, string>;
   color: Record<Color, string>;
+  background: Record<BackgroundColor, string>;
 }
 
 type FontSize = 'normal' | 'regular' | 'small';
-type Color = 'deepGray';
+type Color = 'deepGray' | 'lightGray';
+type BackgroundColor = 'gray';
 
 const theme: Theme = {
   fontSize: {
@@ -14,6 +16,10 @@ const theme: Theme = {
   },
   color: {
     deepGray: '#333',
+    lightGray: '#b6b8ba',
+  },
+  background: {
+    gray: '#bcbec0',
   },
 };
 
