@@ -1,4 +1,4 @@
-import { SEARCHBAR_PLACE_HOLDER } from '../../constants';
+import { INPUT_MIN_WIDTH, SEARCHBAR_PLACE_HOLDER } from '../../constants';
 import styled from 'styled-components';
 
 import searchIcon from '../../images/search.svg';
@@ -6,11 +6,10 @@ import { FormEvent } from 'react';
 
 const SearchForm = styled.form`
   position: relative;
-  margin-top: 10px;
 `;
 
 const SearchInput = styled.input`
-  width: 552px;
+  min-width: ${INPUT_MIN_WIDTH}px;
   padding: 10px 54px 11px 16px;
   border-radius: 8px;
   background-color: #eef1f4;

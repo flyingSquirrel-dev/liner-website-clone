@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import theme from '../../styled/theme';
+import { LEFT_MENU_WIDTH } from '../../constants';
 
 interface Props {
   title: string;
@@ -8,24 +8,27 @@ interface Props {
 }
 
 const Container = styled(NavLink)`
-  width: 232px;
+  width: ${LEFT_MENU_WIDTH}px;
   height: 51px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
   padding: 0 16px;
   font-size: ${({ theme }) => theme.fontSize.normal};
   font-weight: 400;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  line-height: 51px;
   letter-spacing: -0.4px;
+  border-radius: 8px;
   color: ${({ theme }) => theme.color.normalGray};
   cursor: pointer;
-  flex-shrink: 0;
+  box-sizing: border-box;
 
   &:hover {
     background: ${({ theme }) => theme.background.hoverGray};
+  }
+
+  &.active {
+    color: ${({ theme }) => theme.color.blue};
+    font-weight: 700;
   }
 `;
 

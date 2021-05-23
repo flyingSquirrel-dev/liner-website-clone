@@ -5,7 +5,7 @@ export interface Theme {
 }
 
 type FontSize = 'normal' | 'regular' | 'small';
-type Color = 'deepGray' | 'lightGray' | 'normalGray';
+type Color = 'deepGray' | 'lightGray' | 'normalGray' | 'blue';
 type BackgroundColor = 'gray' | 'hoverGray';
 
 const theme: Theme = {
@@ -18,6 +18,7 @@ const theme: Theme = {
     deepGray: '#333',
     lightGray: '#b6b8ba',
     normalGray: '#787d86',
+    blue: '#00bdb8',
   },
   background: {
     gray: '#bcbec0',
