@@ -3,7 +3,7 @@ import { ArticleProps } from '../../@types/article';
 export const article2: ArticleProps = {
   title: '8 Signs and Symptoms of Vitamin D Deficiency - Healthline',
   id: 2,
-  host: 'www.healthline.com',
+  host: 'https://www.healthline.com',
   url: 'https://www.webmd.com/cold-and-flu/features/what-is-pandemic',
   highlight:
     "It's also found in certain foods such as fatty fish and fortified dairy products, though it's very difficult to get enough from diet alone",

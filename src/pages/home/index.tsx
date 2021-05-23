@@ -8,7 +8,7 @@ import { article2 } from '../../mock/articles/article2';
 
 const Container = styled.div`
   display: inline-block;
-  width: 100%;
+  width: 500px;
 `;
 
 const TitleWrapper = styled.div`
