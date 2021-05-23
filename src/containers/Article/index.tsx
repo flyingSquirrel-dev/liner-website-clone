@@ -17,6 +17,8 @@ interface Props {
 
 const Container = styled.div`
   padding-top: 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eef1f4;
 `;
 
 const TextAndThumbnailWrapper = styled.div`
@@ -27,6 +29,7 @@ const TextWrapper = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  cursor: unset;
 `;
 
 const BottomWrapper = styled.div`
@@ -37,6 +40,7 @@ const BottomWrapper = styled.div`
 const Reference = styled.div`
   display: flex;
   align-items: center;
+  padding-bottom: 16px;
 `;
 
 const ReferenceIcon = styled.span`
@@ -67,6 +71,7 @@ const Thumbnail = styled.img`
   margin-left: 24px;
   border-radius: 4px;
   object-fit: cover;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.8;

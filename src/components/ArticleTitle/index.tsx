@@ -10,18 +10,13 @@ const Container = styled.h2`
   font-weight: 700;
   line-height: 1.33;
   color: ${({ theme }) => theme.color.darkGray};
+  cursor: pointer;
 
   &:hover {
     opacity: 0.8;
   }
 `;
 
-const Title = styled.div``;
-
 export const ArticleTitle = ({ title }: Props) => {
-  return (
-    <Container>
-      <Title>{title}</Title>
-    </Container>
-  );
+  return <Container>{title}</Container>;
 };
