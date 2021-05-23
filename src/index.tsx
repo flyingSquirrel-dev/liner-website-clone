@@ -7,11 +7,13 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Home } from './pages/home';
 import { NotFoundPage } from './pages/notfound';
 import { MyHighlights } from './pages/myhighlights';
+import { Header } from './components/Header';
 
 ReactDOM.render(
   <BrowserRouter>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <Header />
       <Switch>
         <Route path="/myhighlights" render={MyHighlights} />
         <Route path="/home" render={Home} />

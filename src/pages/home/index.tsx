@@ -1,26 +1,22 @@
-import { Logo } from '../../components/Logo';
-import { SearchBar } from '../../components/SearchBar';
 import styled from 'styled-components';
-import { NotificationIcon } from '../../components/NotificationIcon';
+import { Menu } from '../../components/Menu';
+import { LeftMenuList } from '../../constants';
 
-const HeaderContainer = styled.header`
+const MenuWrapper = styled.div`
   display: flex;
-  max-width: 80%;
-  margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
-const Header = () => {
-  return (
-    <HeaderContainer>
-      <Logo />
-      <SearchBar />
-      <NotificationIcon />
-    </HeaderContainer>
-  );
-};
-
 export const Home = () => {
-  return <Header />;
+  return (
+    <>
+      <MenuWrapper>
+        {LeftMenuList.map((list) => (
+          <Menu title={list.name} to={list.to} />
+        ))}
+      </MenuWrapper>
+    </>
+  );
 };
