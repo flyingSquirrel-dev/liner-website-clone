@@ -21,7 +21,7 @@ const RootContainer = styled.div`
 
 const ContentWrapper = styled.div`
   display: flex;
-  margin-top: 50px;
+  margin-top: 104px;
 `;
 
 ReactDOM.render(
