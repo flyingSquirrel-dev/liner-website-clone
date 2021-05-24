@@ -9,6 +9,8 @@ export const COLOR_FILTER = 'Color Filter' as const;
 export const PAGE_TYPE = 'Page Type' as const;
 export const SEARCHBAR_PLACE_HOLDER = 'Search on LINER' as const;
 export const SEARCH_TAGS_PLACE_HOLDER = 'Search tags' as const;
+export const SEARCH_MY_HIGHLIGHTS_PLACE_HOLDER =
+  'Search my highlights' as const;
 export const RESET = 'Reset' as const;
 export const APPLY = 'Apply' as const;
 export const LEFT_MENU_WIDTH = 232;

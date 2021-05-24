@@ -8,7 +8,6 @@ interface Props {
 
 const Container = styled.ul`
   display: flex;
-  margin-top: 40px;
 `;
 
 const Tab = styled(NavLink)`
