@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import { DetailPageHeader } from '../../components/DetailPageHeader';
 import { article1 } from '../../mock/articles/article1';
 import { article2 } from '../../mock/articles/article2';
-import { useEffect } from 'react';
 import { ArticleProps } from '../../@types/article';
 import { ViewOriginalButton } from '../../components/ViewOriginalButton';
 

@@ -1,5 +1,3 @@
-import { PageTitle } from '../../components/PageTitle';
-import { MORE } from '../../constants';
 import styled from 'styled-components';
 
 const Container = styled.div`

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import styled, { ThemeProvider } from 'styled-components';
 import theme from './styled/theme';
 import { GlobalStyle } from './styled/GlobalStyle';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { Home } from './pages/home';
 import { NotFoundPage } from './pages/notfound';
 import { MyHighlights } from './pages/myhighlights';
