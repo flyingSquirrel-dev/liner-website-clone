@@ -34,7 +34,11 @@ ReactDOM.render(
           <LeftMenu />
           <Switch>
             <Route path="/detail/:articleID" render={Detail} />
-            <Route path="/myhighlights" render={MyHighlights} />
+            <Route path="/myhighlights/highlights" render={MyHighlights} />
+            <Route path="/myhighlights/tags" render={MyHighlights} />
+            <Route path="/myhighlights">
+              <Redirect to="/myhighlights/highlights" />
+            </Route>
             <Route path="/home" render={Home} />
             <Route path="/more" render={More} />
             <Route path="/" exact={true}>
