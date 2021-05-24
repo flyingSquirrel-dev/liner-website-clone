@@ -45,7 +45,7 @@ export const TrendingKeywords = () => {
       <Title>{TRENDING_KEYWORDS}</Title>
       <KeywordsWrapper>
         {trendingKeywords.map((keyword) => (
-          <Keyword>{keyword}</Keyword>
+          <Keyword key={keyword}>{keyword}</Keyword>
         ))}
       </KeywordsWrapper>
     </Container>

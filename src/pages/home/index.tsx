@@ -41,16 +41,19 @@ export const Home = () => {
           <PageSubtitle subtitle={FOR_YOU_PAGE_SUBTITLE} />
         </TitleWrapper>
         <ArticleWrapper>
-          {[article1, article2, article1, article2, article1].map((article) => (
-            <Article
-              title={article.title}
-              url={article.url}
-              host={article.host}
-              description={article.description}
-              articleID={article.id}
-              thumbnailURL={article.thumbnailURL}
-            />
-          ))}
+          {[article1, article2, article1, article2, article1].map(
+            (article, index) => (
+              <Article
+                key={`${article.title}-${index}`}
+                title={article.title}
+                url={article.url}
+                host={article.host}
+                description={article.description}
+                articleID={article.id}
+                thumbnailURL={article.thumbnailURL}
+              />
+            ),
+          )}
         </ArticleWrapper>
       </ContentWrapper>
       <RightWrapper>

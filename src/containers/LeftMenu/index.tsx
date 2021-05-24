@@ -13,7 +13,7 @@ export const LeftMenu = () => {
   return (
     <Container>
       {LeftMenuList.map((list) => (
-        <Menu title={list.name} to={list.to} />
+        <Menu key={list.name} title={list.name} to={list.to} />
       ))}
     </Container>
   );

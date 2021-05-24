@@ -108,7 +108,7 @@ export const ShareModal = ({ modalHandler }: Props) => {
               'line',
               'mail',
             ].map((iconName) => (
-              <Icon iconName={iconName} />
+              <Icon key={iconName} iconName={iconName} />
             ))}
           </IconWrapper>
           <CopyURLWrapper>

@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import infoIcon from '../../images/info.svg';
 import { Dropbox } from '../Dropbox';
-import { FOR_YOU_TITLE_DROPBOX } from '../../constants';
+import {
+  FOR_YOU,
+  FOR_YOU_TITLE_DROPBOX,
+  SIGNAL_SUBTITLE,
+} from '../../constants';
+import { useState } from 'react';
+import { Infobox } from '../Infobox';
 
 interface Props {
   title: string;
@@ -14,6 +20,7 @@ const Container = styled.div`
 `;
 
 const TitleWrapper = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
 `;
@@ -33,11 +40,20 @@ const InfoButton = styled.button`
 `;
 
 export const PageTitle = ({ title }: Props) => {
+  const [isInfoboxOpen, setInfoboxOpen] = useState<boolean>(false);
+
+  const handleInfoButtonClick = () => {
+    setInfoboxOpen((prev) => !prev);
+  };
+
   return (
     <Container>
       <TitleWrapper>
         <Title>{title}</Title>
-        <InfoButton />
+        <InfoButton onClick={handleInfoButtonClick} />
+        {isInfoboxOpen && (
+          <Infobox title={FOR_YOU} subtitle={SIGNAL_SUBTITLE} />
+        )}
       </TitleWrapper>
       <Dropbox
         title={FOR_YOU_TITLE_DROPBOX.title}

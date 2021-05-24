@@ -82,10 +82,10 @@ export const TrendingPages = () => {
           const { title, hashtags, url } = trendingPage1;
 
           return (
-            <PageWrapper>
+            <PageWrapper key={page}>
               <HashTagsWrapper>
                 {hashtags.map((hashtag) => (
-                  <Hashtag>{hashtag}</Hashtag>
+                  <Hashtag key={hashtag}>{hashtag}</Hashtag>
                 ))}
               </HashTagsWrapper>
               <PageTitle>{title}</PageTitle>
