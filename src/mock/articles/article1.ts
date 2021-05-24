@@ -9,4 +9,5 @@ export const article1: ArticleProps = {
     '"A pandemic is basically a global epidemic -- an epidemic that spreads to more than one continent," says Dan Epstein, a spokesman for the Pan American Health Organization, a regional office of the World Health Organization',
   description:
     "There are two main features of an influenza pandemic. First, the virus is a new strain that has never infected people before. Second, it's on a global scale.",
+  date: 'May 22, 2021',
 };

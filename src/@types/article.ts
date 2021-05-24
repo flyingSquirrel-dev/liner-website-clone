@@ -5,5 +5,6 @@ export interface ArticleProps {
   url: string;
   highlight: string;
   description: string;
+  date: string;
   thumbnailURL?: string;
 }

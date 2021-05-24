@@ -1,6 +1,6 @@
 import { ArticleTitle } from '../../components/ArticleTitle';
 import { ArticleDescription } from '../../components/ArticleDescription';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import icon from '../../images/favicon.svg';
 import { SaveIcon } from '../../components/SaveIcon';
@@ -14,6 +14,8 @@ interface Props {
   description: string;
   articleID: number;
   thumbnailURL?: string;
+  highlight?: string;
+  date?: string;
 }
 
 const Container = styled.div`
@@ -53,12 +55,16 @@ const ReferenceIcon = styled.span`
   background-position: 50%;
 `;
 
-const ReferenceText = styled.a`
+const ReferenceTextCss = css`
   margin-left: 14px;
   font-size: ${({ theme }) => theme.fontSize.tiny};
   font-weight: 400;
   color: ${({ theme }) => theme.color.gray};
   text-decoration: underline;
+`;
+
+const ReferenceText = styled.a`
+  ${ReferenceTextCss};
 `;
 
 const IconWrapper = styled.div`
@@ -79,9 +85,31 @@ const Thumbnail = styled.img`
   }
 `;
 
+const Divider = styled.div`
+  border-left: 1px solid #777;
+  height: 10px;
+  margin: 0 6px;
+`;
+
+const Date = styled.div`
+  ${ReferenceTextCss};
+  margin: 0;
+  text-decoration: none;
+`;
+
+const ForYouArticleIcons = () => (
+  <>
+    <SaveIcon />
+    <ShareIcon />
+    <MoreIcon />
+  </>
+);
+
 export const Article = ({
   title,
   host,
+  highlight,
+  date,
   description,
   articleID,
   thumbnailURL,
@@ -101,11 +129,15 @@ export const Article = ({
           <ReferenceText href={host} target="_blank" rel="noreferrer noopener">
             {host}
           </ReferenceText>
+          {highlight && (
+            <>
+              <Divider />
+              <Date>{date}</Date>
+            </>
+          )}
         </Reference>
         <IconWrapper>
-          <SaveIcon />
-          <ShareIcon />
-          <MoreIcon />
+          {highlight ? <ForYouArticleIcons /> : <ForYouArticleIcons />}
         </IconWrapper>
       </BottomWrapper>
     </Container>

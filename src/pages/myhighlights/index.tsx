@@ -11,8 +11,9 @@ import { PageSubtitle } from '../../components/PageSubtitle';
 import { Tabs } from '../../components/Tabs';
 import { FilterIcon } from '../../components/FilterIcon';
 import { SearchHighlightBar } from '../../components/SearchHighlightBar';
-import { TrendingKeywords } from '../../components/TrendingKeywords';
-import { TrendingPages } from '../../components/TrendingPages';
+import { article1 } from '../../mock/articles/article1';
+import { article2 } from '../../mock/articles/article2';
+import { Article } from '../../containers/Article';
 
 const Container = styled.div`
   display: flex;
@@ -29,6 +30,11 @@ const TopWrapper = styled.div`
 
 const TitleWrapper = styled.div`
   width: 100%;
+`;
+
+const ArticleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const TabWrapper = styled.div`
@@ -70,6 +76,21 @@ export const MyHighlights = () => {
             <SearchHighlightBar />
           </FilterWrapper>
         </TabWrapper>
+        <ArticleWrapper>
+          {[article1, article2].map((article, index) => (
+            <Article
+              key={`${article.title}-${index}`}
+              title={article.title}
+              url={article.url}
+              host={article.host}
+              highlight={article.highlight}
+              date={article.date}
+              description={article.description}
+              articleID={article.id}
+              thumbnailURL={article.thumbnailURL}
+            />
+          ))}
+        </ArticleWrapper>
       </ContentWrapper>
       <RightWrapper />
     </Container>
