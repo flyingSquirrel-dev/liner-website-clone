@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import Lottie from 'react-lottie';
-import signalJSON from '../../images/lottie/signal';
 
 interface Props {
-  image?: any;
+  image: any;
   title: string;
   subtitle: string;
 }
@@ -11,7 +10,7 @@ interface Props {
 const InfoBubble = styled.div`
   position: absolute;
   top: 0;
-  left: 190px;
+  left: 60px;
   min-width: 300px;
   min-height: 100px;
   border-radius: 0.4em;
@@ -62,7 +61,7 @@ export const Infobox = ({ image, title, subtitle }: Props) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: signalJSON,
+    animationData: image,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
     },

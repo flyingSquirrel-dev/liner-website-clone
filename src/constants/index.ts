@@ -5,7 +5,6 @@ export const MY_HIGHLIGHTS = 'My Highlights' as const;
 export const MORE = 'More' as const;
 export const SEARCHBAR_PLACE_HOLDER = 'Search on LINER' as const;
 export const LEFT_MENU_WIDTH = 232;
-export const CONTENT_WIDTH = 550;
 
 export const LeftMenuList: MenuListProps[] = [
   { name: FOR_YOU, to: '/home' },
@@ -42,3 +41,5 @@ export const HIDE_THIS_PAGE = 'Hide this page' as const;
 
 export const SIGNAL_SUBTITLE =
   "We recommend you pages you'll love and need. The more you highlight, the smarter our algorithm gets." as const;
+export const HIGHLIGHTS_SUBTITLE =
+  'All your work, including highlights and comments will be safely stored on this page.' as const;

@@ -3,6 +3,7 @@ import {
   FOR_YOU,
   FOR_YOU_PAGE_SUBTITLE,
   FOR_YOU_TITLE_DROPBOX,
+  SIGNAL_SUBTITLE,
 } from '../../constants';
 import { PageSubtitle } from '../../components/PageSubtitle';
 import styled from 'styled-components';
@@ -12,6 +13,7 @@ import { article2 } from '../../mock/articles/article2';
 import { TrendingKeywords } from '../../components/TrendingKeywords';
 import { TrendingPages } from '../../components/TrendingPages';
 import { Dropbox } from '../../components/Dropbox';
+import signalJSON from '../../images/lottie/signal';
 
 const Container = styled.div`
   display: flex;
@@ -47,7 +49,12 @@ export const Home = () => {
       <ContentWrapper>
         <TopWrapper>
           <TitleWrapper>
-            <PageTitle title={FOR_YOU} />
+            <PageTitle
+              title={FOR_YOU}
+              infoboxImage={signalJSON}
+              infoboxTitle={FOR_YOU}
+              infoboxSubtitle={SIGNAL_SUBTITLE}
+            />
             <PageSubtitle subtitle={FOR_YOU_PAGE_SUBTITLE} />
           </TitleWrapper>
           <Dropbox

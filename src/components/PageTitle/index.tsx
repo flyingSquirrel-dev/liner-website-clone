@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import infoIcon from '../../images/info.svg';
-import { FOR_YOU, SIGNAL_SUBTITLE } from '../../constants';
 import { useState } from 'react';
 import { Infobox } from '../Infobox';
 
 interface Props {
   title: string;
+  infoboxImage: any;
+  infoboxTitle: string;
+  infoboxSubtitle: string;
 }
 
 const Container = styled.div`
@@ -15,7 +17,6 @@ const Container = styled.div`
 `;
 
 const TitleWrapper = styled.div`
-  position: relative;
   display: flex;
   align-items: center;
 `;
@@ -23,6 +24,10 @@ const TitleWrapper = styled.div`
 const Title = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.large};
   font-weight: 700;
+`;
+
+const InfoWrapper = styled.div`
+  position: relative;
 `;
 
 const InfoButton = styled.button`
@@ -34,7 +39,12 @@ const InfoButton = styled.button`
   background-position: 50%;
 `;
 
-export const PageTitle = ({ title }: Props) => {
+export const PageTitle = ({
+  title,
+  infoboxImage,
+  infoboxTitle,
+  infoboxSubtitle,
+}: Props) => {
   const [isInfoboxOpen, setInfoboxOpen] = useState<boolean>(false);
 
   const handleInfoButtonClick = () => {
@@ -45,10 +55,16 @@ export const PageTitle = ({ title }: Props) => {
     <Container>
       <TitleWrapper>
         <Title>{title}</Title>
-        <InfoButton onClick={handleInfoButtonClick} />
-        {isInfoboxOpen && (
-          <Infobox title={FOR_YOU} subtitle={SIGNAL_SUBTITLE} />
-        )}
+        <InfoWrapper>
+          <InfoButton onClick={handleInfoButtonClick} />
+          {isInfoboxOpen && (
+            <Infobox
+              image={infoboxImage}
+              title={infoboxTitle}
+              subtitle={infoboxSubtitle}
+            />
+          )}
+        </InfoWrapper>
       </TitleWrapper>
     </Container>
   );
