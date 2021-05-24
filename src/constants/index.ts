@@ -13,6 +13,7 @@ export const SEARCH_MY_HIGHLIGHTS_PLACE_HOLDER =
   'Search my highlights' as const;
 export const RESET = 'Reset' as const;
 export const APPLY = 'Apply' as const;
+export const VIEW_ORIGINAL = 'View Original' as const;
 export const LEFT_MENU_WIDTH = 232;
 
 export const LeftMenuList: MenuListProps[] = [

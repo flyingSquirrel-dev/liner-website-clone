@@ -33,18 +33,18 @@ ReactDOM.render(
         <ContentWrapper>
           <LeftMenu />
           <Switch>
-            <Route path="/detail/:articleID" render={Detail} />
-            <Route path="/myhighlights/highlights" render={MyHighlights} />
-            <Route path="/myhighlights/tags" render={MyHighlights} />
+            <Route path="/detail/:articleID" component={Detail} />
+            <Route path="/myhighlights/highlights" component={MyHighlights} />
+            <Route path="/myhighlights/tags" component={MyHighlights} />
             <Route path="/myhighlights">
               <Redirect to="/myhighlights/highlights" />
             </Route>
-            <Route path="/home" render={Home} />
-            <Route path="/more" render={More} />
+            <Route path="/home" component={Home} />
+            <Route path="/more" component={More} />
             <Route path="/" exact={true}>
               <Redirect to="/home" />
             </Route>
-            <Route path="*" render={NotFoundPage} />
+            <Route path="*" component={NotFoundPage} />
           </Switch>
         </ContentWrapper>
       </RootContainer>

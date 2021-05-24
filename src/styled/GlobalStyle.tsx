@@ -25,4 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     color: unset;
   }
+  h1, h2, div {
+    cursor: text;
+  }
 `;

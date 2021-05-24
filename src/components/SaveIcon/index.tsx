@@ -18,6 +18,11 @@ const IconCommonStyle = css`
   }
 `;
 
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 const UnsaveIcon = styled.button`
   ${IconCommonStyle};
   background-image: url(${unsaveIcon});
@@ -43,10 +48,10 @@ export const SaveIcon = () => {
   const handleOnClick = () => setSaveButtonActivation(!isSaveButtonActive);
 
   return isSaveButtonActive ? (
-    <>
+    <Container>
       <Text>{ADD_TAGS}</Text>
       <SaveFillIcon onClick={handleOnClick} />
-    </>
+    </Container>
   ) : (
     <UnsaveIcon onClick={handleOnClick} />
   );
