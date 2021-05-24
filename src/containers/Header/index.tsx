@@ -13,7 +13,7 @@ const HeaderContainer = styled.header`
   grid-template-columns: ${LEFT_MENU_WIDTH}px auto 344px;
   background-color: ${({ theme }) => theme.background.white};
   align-items: center;
-  z-index: 100;
+  z-index: 9;
 `;
 
 export const Header = () => {

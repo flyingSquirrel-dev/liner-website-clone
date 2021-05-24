@@ -11,6 +11,11 @@ const Icon = styled.button`
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: 50%;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.background.hoverGray};
+    border-radius: 50%;
+  }
 `;
 
 export const ShareIcon = () => {

@@ -35,3 +35,7 @@ export const COPY = 'COPY' as const;
 
 export const TRENDING_KEYWORDS = 'Trending Keywords' as const;
 export const TRENDING_PAGES = 'Trending Pages' as const;
+
+export const MORE_PAGES_LIKE_THIS = 'More pages like this' as const;
+export const FEWER_PAGES_LIKE_THIS = 'Fewer pages like this' as const;
+export const HIDE_THIS_PAGE = 'Hide this page' as const;

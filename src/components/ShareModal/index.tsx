@@ -17,6 +17,7 @@ const Background = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
 `;
 
 const ModalWrapper = styled.div`
@@ -28,7 +29,7 @@ const ModalWrapper = styled.div`
   transform: translate(-50%, -50%);
   border-radius: 16px;
   background-color: ${({ theme }) => theme.background.white};
-  z-index: 10;
+  z-index: 11;
 `;
 
 const TitleWrapper = styled.div`

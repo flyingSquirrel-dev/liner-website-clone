@@ -11,6 +11,11 @@ const IconCommonStyle = css`
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: 50%;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.background.hoverGray};
+    border-radius: 50%;
+  }
 `;
 
 const UnsaveIcon = styled.button`
