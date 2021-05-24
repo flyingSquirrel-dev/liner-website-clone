@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 import infoIcon from '../../images/info.svg';
-import { Dropbox } from '../Dropbox';
-import {
-  FOR_YOU,
-  FOR_YOU_TITLE_DROPBOX,
-  SIGNAL_SUBTITLE,
-} from '../../constants';
+import { FOR_YOU, SIGNAL_SUBTITLE } from '../../constants';
 import { useState } from 'react';
 import { Infobox } from '../Infobox';
 
@@ -55,11 +50,6 @@ export const PageTitle = ({ title }: Props) => {
           <Infobox title={FOR_YOU} subtitle={SIGNAL_SUBTITLE} />
         )}
       </TitleWrapper>
-      <Dropbox
-        title={FOR_YOU_TITLE_DROPBOX.title}
-        description={FOR_YOU_TITLE_DROPBOX.description}
-        options={FOR_YOU_TITLE_DROPBOX.options}
-      />
     </Container>
   );
 };

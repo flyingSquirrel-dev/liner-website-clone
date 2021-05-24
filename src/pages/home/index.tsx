@@ -1,5 +1,9 @@
 import { PageTitle } from '../../components/PageTitle';
-import { FOR_YOU, FOR_YOU_PAGE_SUBTITLE } from '../../constants';
+import {
+  FOR_YOU,
+  FOR_YOU_PAGE_SUBTITLE,
+  FOR_YOU_TITLE_DROPBOX,
+} from '../../constants';
 import { PageSubtitle } from '../../components/PageSubtitle';
 import styled from 'styled-components';
 import { Article } from '../../containers/Article';
@@ -7,8 +11,13 @@ import { article1 } from '../../mock/articles/article1';
 import { article2 } from '../../mock/articles/article2';
 import { TrendingKeywords } from '../../components/TrendingKeywords';
 import { TrendingPages } from '../../components/TrendingPages';
+import { Dropbox } from '../../components/Dropbox';
 
 const Container = styled.div`
+  display: flex;
+`;
+
+const TopWrapper = styled.div`
   display: flex;
 `;
 
@@ -36,10 +45,17 @@ export const Home = () => {
   return (
     <Container>
       <ContentWrapper>
-        <TitleWrapper>
-          <PageTitle title={FOR_YOU} />
-          <PageSubtitle subtitle={FOR_YOU_PAGE_SUBTITLE} />
-        </TitleWrapper>
+        <TopWrapper>
+          <TitleWrapper>
+            <PageTitle title={FOR_YOU} />
+            <PageSubtitle subtitle={FOR_YOU_PAGE_SUBTITLE} />
+          </TitleWrapper>
+          <Dropbox
+            title={FOR_YOU_TITLE_DROPBOX.title}
+            description={FOR_YOU_TITLE_DROPBOX.description}
+            options={FOR_YOU_TITLE_DROPBOX.options}
+          />
+        </TopWrapper>
         <ArticleWrapper>
           {[article1, article2, article1, article2, article1].map(
             (article, index) => (
