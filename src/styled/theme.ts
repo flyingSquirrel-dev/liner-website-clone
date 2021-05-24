@@ -21,7 +21,8 @@ type Color =
   | 'darkGray'
   | 'gray'
   | 'trendingTitle'
-  | 'trendingKeyword';
+  | 'trendingKeyword'
+  | 'dropboxOption';
 type BackgroundColor =
   | 'gray'
   | 'hoverGray'
@@ -49,6 +50,7 @@ const theme: Theme = {
     blue: '#00bdb8',
     trendingTitle: '#969aa2',
     trendingKeyword: '#555',
+    dropboxOption: '#52565d',
   },
   background: {
     gray: '#bcbec0',

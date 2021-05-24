@@ -17,7 +17,14 @@ export const FOR_YOU_PAGE_SUBTITLE = 'Picked by LINER, just for you' as const;
 export const FOR_YOU_TITLE_DROPBOX = {
   title: 'Languages',
   description: 'Select for feed',
-  options: ['English', '한국어', '简体字', '繁體字', '日本語', 'Others'],
+  options: [
+    { optionName: 'English', isSelected: true },
+    { optionName: '한국어', isSelected: false },
+    { optionName: '简体字', isSelected: false },
+    { optionName: '繁體字', isSelected: false },
+    { optionName: '日本語', isSelected: false },
+    { optionName: 'Others', isSelected: false },
+  ],
 };
 
 export const ADD_TAGS = '+ Add Tags' as const;
