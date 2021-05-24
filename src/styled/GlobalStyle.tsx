@@ -17,7 +17,6 @@ export const GlobalStyle = createGlobalStyle`
   }
   button {
     border: none;
-    box-sizing: content-box;
     background-color: unset;
     cursor: pointer;
   }
